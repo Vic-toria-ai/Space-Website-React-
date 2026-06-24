@@ -8,7 +8,7 @@ const Navbar = () => {
 
   return (
     <header className="relative">
-      <nav className="flex md:flex-row justify-between items-center w-full p-4 text-white">
+      <nav className="flex md:flex-row justify-between items-center w-full text-white md:py-6 p-4 md:pe-0 md:ps-6">
         <img src={logo} alt="Logo" className="h-8" />
 
         <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden">
@@ -18,14 +18,15 @@ const Navbar = () => {
             <img src={hamburger} alt="Open Menu" className="h-8 " />
           )}
         </button>
+        <ul className={`${menuOpen ? 'block' : 'hidden'} md:flex md:flex-row flex flex-col md:items-center space-y-2 p-4 md:space-x-8 absolute md:relative top-full right-0 md:right-auto z-50 text-white bg-white/10 backdrop-blur-md md:p-0 md:space-y-0 md:h-12 md:px-6`}>
+          <li className="text-sm uppercase" > <span className="font-semibold p-2 "> 00 </span>  Home</li>
+          <li className="text-sm uppercase" > <span className="font-semibold p-2 "> 01 </span>  Destination</li>
+          <li className="text-sm uppercase" > <span className="font-semibold p-2 "> 02 </span>  Crew</li>
+          <li className="text-sm uppercase" > <span className="font-semibold p-2 "> 03 </span>  Technology</li>
+        </ul>
       </nav>
 
-        <ul className={`${menuOpen ? 'block' : 'hidden'} md:flex md:flex-row flex flex-col space-y-2 p-4 absolute top-full left-0 right-0 z-50 text-white bg-gray-800`}>
-          <li> 00  Home</li>
-          <li> 01  Destination</li>
-          <li> 02  Crew</li>
-          <li> 03  Technology</li>
-        </ul>
+        
       
     </header>
   );
