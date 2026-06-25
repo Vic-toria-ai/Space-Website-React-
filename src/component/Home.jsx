@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 
 const Home = () => {
   return (
-    <div className="bg-[url(/src/assets/background-home-mobile.jpg)] bg-no-repeat text-white bg-cover bg-fixed bg-center">
+    <div className="bg-[url(/src/assets/background-home-mobile.jpg)] bg-no-repeat text-white bg-cover bg-fixed bg-center lg:bg-bottom-right lg:bg-[url(/src/assets/background-home-desktop.jpg)] md:bg-[url(src/assets/background-home-tablet.jpg)] relative">
       <Navbar />
       <main className="flex justify-center md:h-screen ">
         <div className="lg:w-4/5 grid lg:grid-cols-2 items-center text-center lg:text-start p-4">
@@ -20,7 +20,7 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-col items-center lg:items-end">
-            <p className="font-serif text-sm uppercase tracking-widest bg-white text-black p-4 mb-8 rounded-full w-40 h-40 lg:w-50 lg:h-50 flex justify-center place-items-center mx-auto lg:mx-0">
+            <p className="font-serif text-sm uppercase tracking-widest bg-white text-black p-4 mb-8 rounded-full w-40 h-40 lg:w-50 lg:h-50 md:h-47 md:w-47 flex justify-center place-items-center mx-auto lg:mx-0">
               Explore
             </p>
           </div>
